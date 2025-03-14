@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid Sem PYQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to right, #0073e6, #00c6ff);
+            color: white;
+        }
+        header {
+            background: rgba(0, 0, 50, 0.8);
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .container {
+            padding: 50px;
+        }
+        .year-section {
+            margin: 20px auto;
+            padding: 15px;
+            border: 2px solid white;
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            width: 60%;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+        .year-section:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+        .subject-list {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .subject-list div {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid white;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+        .subject-list div:hover {
+            background: rgba(255, 255, 255, 0.6);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>Mid Sem PYQ - Select Year</header>
+    <div class="container">
+        <div class="year-section" onclick="toggleSubjects('2024-25')">PYQ of Year 2024-25</div>
+        <div id="subjects-2024-25" class="subject-list">
+            <div onclick="window.location.href='2024-25_cse_mid.html'">Computer Science</div>
+            <div onclick="window.location.href='2024-25_mech_mid.html'">Mechanical</div>
+            <div onclick="window.location.href='2024-25_civil_mid.html'">Civil</div>
+            <div onclick="window.location.href='2024-25_electrical_mid.html'">Electrical</div>
+            <div onclick="window.location.href='2024-25_electronics_mid.html'">Electronics</div>
+            <div onclick="window.location.href='2024-25_inst_mid.html'">Instrumentation & Control</div>
+        </div>
+
+        <div class="year-section" onclick="toggleSubjects('2023-24')">PYQ of Year 2023-24</div>
+        <div id="subjects-2023-24" class="subject-list">
+            <div onclick="window.location.href='2023-24_cse_mid.html'">Computer Science</div>
+            <div onclick="window.location.href='2023-24_mech_mid.html'">Mechanical</div>
+            <div onclick="window.location.href='2023-24_civil_mid.html'">Civil</div>
+            <div onclick="window.location.href='2023-24_electrical_mid.html'">Electrical</div>
+            <div onclick="window.location.href='2023-24_electronics_mid.html'">Electronics</div>
+            <div onclick="window.location.href='2023-24_inst_mid.html'">Instrumentation & Control</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSubjects(year) {
+            let subjectList = document.getElementById("subjects-" + year);
+            let allSubjects = document.querySelectorAll(".subject-list");
+
+            allSubjects.forEach(sub => {
+                if (sub !== subjectList) sub.style.display = "none";
+            });
+
+            subjectList.style.display = (subjectList.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
