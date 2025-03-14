@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Engineering Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0073e6, #00c6ff);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 50, 0.8);
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            margin: 15px;
+            border: 2px solid white;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .upload-section {
+            margin-top: 20px;
+        }
+        .upload-section input[type="file"] {
+            display: none;
+        }
+        .upload-section label {
+            background-color: #0073e6;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .upload-section label:hover {
+            background-color: #00c6ff;
+        }
+    </style>
+</head>
+<body>
+    <header>Electronics Engineering Projects</header>
+
+    <div class="gallery">
+        <!-- Sample images, these can be dynamically loaded -->
+        <img src="project1.jpg" alt="Project 1">
+        <img src="project2.jpg" alt="Project 2">
+        <img src="project3.jpg" alt="Project 3">
+    </div>
+
+    <div class="upload-section">
+        <!-- Upload section visible only to the user -->
+        <input type="file" id="uploadFile" />
+        <label for="uploadFile">Upload Project Photo</label>
+    </div>
+</body>
+</html>
